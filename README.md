@@ -32,9 +32,9 @@ A website where a customer can choose size, toppings, and extras for a pizza and
 
 ## Setup/Installation Requirements
 
-*_Open in Github_
+* _Open in Github_
 * _Clone repository_
-*_Copy to desktop_
+* _Copy to desktop_
 * _Open in browser_
 
 ## Support and contact details
