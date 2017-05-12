@@ -10,7 +10,7 @@
 #top {
   background-color: white;
   border: 2px solid black;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   font-family: 'Inknut Antiqua', serif;
 
@@ -22,15 +22,6 @@
 
 #pizza-pic-row {
   display: none;
-}
-
-.contact {
-  cursor: pointer;
-  color: #0088cc;
-}
-
-.contact:hover {
-  text-decoration: underline;
 }
 
 #pizza-image {
@@ -54,11 +45,23 @@ h2 {
 
 .container {
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: white;
   padding: 60px;
-  border: 4px solid red;
+  border: 4px solid #FC1F44;
+  font-size: 14pt;
 }
 
 body {
   background-image: url(../img/background.jpg);
+}
+
+.btn {
+  background-color: #19AD3E;
+  color: white;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
 }
