@@ -46,11 +46,18 @@
              </div>
 
              <div class="form-group">
-              <strong><p>Select your pizza toppings</p></strong>
-              <input type="checkbox" name="toppings" value="Italian Sausage"> Italian Sausage (+$1.25)<br>
-              <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni (+$1.25)<br>
-              <input type="checkbox" name="toppings" value="Bacon"> Bacon (+$1.25)<br>
-              <input type="checkbox" name="toppings" value="Pineapple"> Pineapple (+$1.25)<br>
+              <strong><p>Select your pizza toppings (+$1.25 each)</p></strong>
+              <input type="checkbox" name="toppings" value="Italian Sausage"> Italian Sausage<br>
+              <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="toppings" value="Bacon"> Bacon<br>
+              <input type="checkbox" name="toppings" value="Pineapple"> Pineapple<br>
+              <input type="checkbox" name="toppings" value="Hamburger"> Hamburger<br>
+              <input type="checkbox" name="toppings" value="Canadian Bacon"> Canadian Bacon<br>
+              <input type="checkbox" name="toppings" value="Chicken"> Chicken<br>
+              <input type="checkbox" name="toppings" value="Anchovy"> Anchovy<br>
+              <input type="checkbox" name="toppings" value="Mushroom"> Mushroom<br>
+              <input type="checkbox" name="toppings" value="Onion"> Onion<br>
+              <input type="checkbox" name="toppings" value="Green Pepper"> Green Pepper<br>
             </div>
 
             <div class="form-group">
@@ -69,12 +76,12 @@
         <div class="col-md-6">
           <div id="show-pizza">
             <h2>Your Order:</h2>
-            <p>Size: <span class="first-name"></span></p>
-            <p>Toppings: <span class="last-name"></span></p>
-            <p>Special Instructions:</p>
-            <ul id="addresses">
-
-            </ul>
+            <p>Price: <span id="pizza-price"></span></p>
+            <p>Size: <span id="pizza-size"></span></p>
+            <p>Toppings:<ul id="pizza-toppings">
+            </ul></p>
+            <p>Special Instructions:<ul id="pizza-specials">
+            </ul></p>
           </div>
         </div>
 
