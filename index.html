@@ -8,13 +8,27 @@
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>    <title></title>
+    <script
+    src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+    integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua|Work+Sans:900" rel="stylesheet">
+    <title></title>
   </head>
   <body>
     <div class="container">
-      <h1>Imo's Pizza</h1>
+      <div class="row" id="top">
+        <div class="col-md-6">
+          <img src="img/imos.jpeg" alt="Imo's Pizza Logo" id="logo">
+        </div>
+        <div class="col-md-6">
+          <h3><em>"The Square Beyond Compare"</em></h3>
+        </div>
+        <img src="img/topimage.jpg" alt="" id="top-pizza">
+      </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6" id="pizza-row">
           <h2>Build your pizza</h2>
           <form id="new-pizza">
             <div class="size">
@@ -70,56 +84,61 @@
 
             <button type="submit" class="btn">Order</button>
           </form>
-        </div>
-
-        <div class="col-md-4">
-          <form id="extras">
-              <h3>Add some <strong>Toasted Ravioli</strong> to your order!</h3>
-              <div class="t-ravs">
-                 <label for="travs">Please select a size:</label>
-                 <div class="radio">
-                   <label>
-                     <input type="radio" name="travs" value="6.79">
-                     8 Peice
-                   </label>
-                 </div>
-                 <div class="radio">
-                   <label>
-                     <input type="radio" name="travs" value="17.50">
-                     24 Peice
-                   </label>
-                 </div>
-                 <div class="radio">
-                   <label>
-                     <input type="radio" name="travs" value="27.95">
-                     50 Peice
-                   </label>
-                 </div>
-                 <div class="radio">
-                   <label>
-                     <input type="radio" name="travs" value="0">
-                     No thanks
-                   </label>
-                 </div>
-               </div>
-            <button type="submit" class="btn">Update Order</button>
-          </form>
-        </div>
-
-
-        <div class="col-md-4">
-          <div id="show-pizza">
-            <h2>Your Order:</h2>
-            <p>Price: <span id="pizza-price"></span></p>
-            <p>Size: <span id="pizza-size"></span></p>
-            <p>Toppings:<ul id="pizza-toppings">
-            </ul></p>
-            <p>Special Instructions:<ul id="pizza-specials">
-            </ul></p>
-            <p>Extras: <span id="pizza-extras"></span></p>
+          <div class="row">
+            <div class="col-md-12" id="extras-row">
+              <form id="extras">
+                  <h3>Add some <strong>Toasted Ravioli</strong> to your order!</h3>
+                  <div class="t-ravs">
+                    <img src="img/travs.png" alt="">
+                     <label for="travs">Please select a size:</label>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="travs" value="6.79">
+                         8 Peice
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="travs" value="17.50">
+                         24 Peice
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="travs" value="27.95">
+                         50 Peice
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="travs" value="0">
+                         No thanks
+                       </label>
+                     </div>
+                   </div>
+                <button type="submit" class="btn">Update Order</button>
+              </form>
+            </div>
+            <div class="col-md-12" id="pizza-pic-row">
+              <div id="show-pizza-image">
+                <img src="" alt="" id="pizza-image">
+              </div>
+            </div>
           </div>
         </div>
-
+        <div class="col-md-6">
+          <div id="show-pizza">
+            <img src="img/pizzaguy.jpeg" alt="">
+            <h2>Your Order:</h2>
+            <p><strong>Price:</strong> <span id="pizza-price"></span></p>
+            <p><strong>Size: </strong> <span id="pizza-size"></span></p>
+            <p><strong>Toppings:</strong> <ul id="pizza-toppings">
+            </ul></p>
+            <p><strong>Special Instructions:</strong> <ul id="pizza-specials">
+            </ul></p>
+            <p><strong>Extras: </strong> <span id="pizza-extras"></span></p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -15,16 +15,6 @@ Pizza.prototype.getPrice = function() {
 }
 
 
-
-// function resetFields() {
-//     $("input#size").val("");
-//     $("input:checkbox[name=toppings]").val("");
-//     // $("input.new-type").val("");
-//     // $("input.new-street").val("");
-//     // $("input.new-city").val("");
-//     // $("input.new-state").val("");
-// }
-
 // user interface logic
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
@@ -72,9 +62,8 @@ $(document).ready(function() {
     }
 
     $("#pizza-price").text("$" + pizzaPrice);
-  //
-  //
-  //   // resetFields();
+    $("#new-pizza").slideUp();
+    $("#extras-row").show();
 
     $("form#extras").submit(function(event) {
       event.preventDefault();
@@ -97,6 +86,19 @@ $(document).ready(function() {
       else {
         $("#pizza-extras").text("N/A");
       }
+
+      $("#extras").slideUp();
+      $("#pizza-pic-row").show();
+
+      console.log(newPizza);
+
+      if (newPizza.toppings.length === 0 ) {
+      $("#pizza-image").attr( "src", "img/pizza-cheese.jpg");
+      }
+      else {
+        $("#pizza-image").attr( "src", "img/pizza-everything.jpg");
+      }
+
 
     });
   });
