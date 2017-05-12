@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Imo's Pizza</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Create your pizza</h2>
+          <form id="new-pizza">
+            <div class="size">
+               <label for="size">Select your pizza size</label>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="9.30">
+                   10" Small
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="11.60">
+                   12" Medium
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="14.45">
+                   14" Large
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="17.35">
+                   16" X-Large
+                 </label>
+               </div>
+             </div>
+
+             <div class="form-group">
+              <strong><p>Select your pizza toppings</p></strong>
+              <input type="checkbox" name="toppings" value="Italian Sausage"> Italian Sausage (+$1.25)<br>
+              <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni (+$1.25)<br>
+              <input type="checkbox" name="toppings" value="Bacon"> Bacon (+$1.25)<br>
+              <input type="checkbox" name="toppings" value="Pineapple"> Pineapple (+$1.25)<br>
+            </div>
+
+            <div class="form-group">
+             <strong><p>Any special instructions?</p></strong>
+             <input type="checkbox" name="special" value="No Cheese"> No Cheese<br>
+             <input type="checkbox" name="special" value="Well Done"> Well Done<br>
+             <input type="checkbox" name="special" value="Do Not Cut"> Do Not Cut<br>
+             <input type="checkbox" name="special" value="No Sauce"> No Sauce<br>
+           </div>
+
+            <button type="submit" class="btn">Order</button>
+          </form>
+
+        </div>
+
+        <div class="col-md-6">
+          <div id="show-pizza">
+            <h2>Your Order:</h2>
+            <p>Size: <span class="first-name"></span></p>
+            <p>Toppings: <span class="last-name"></span></p>
+            <p>Special Instructions:</p>
+            <ul id="addresses">
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
