@@ -14,8 +14,8 @@
     <div class="container">
       <h1>Imo's Pizza</h1>
       <div class="row">
-        <div class="col-md-6">
-          <h2>Create your pizza</h2>
+        <div class="col-md-4">
+          <h2>Build your pizza</h2>
           <form id="new-pizza">
             <div class="size">
                <label for="size">Select your pizza size</label>
@@ -70,10 +70,44 @@
 
             <button type="submit" class="btn">Order</button>
           </form>
-
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
+          <form id="extras">
+              <h3>Add some <strong>Toasted Ravioli</strong> to your order!</h3>
+              <div class="t-ravs">
+                 <label for="travs">Please select a size:</label>
+                 <div class="radio">
+                   <label>
+                     <input type="radio" name="travs" value="6.79">
+                     8 Peice
+                   </label>
+                 </div>
+                 <div class="radio">
+                   <label>
+                     <input type="radio" name="travs" value="17.50">
+                     24 Peice
+                   </label>
+                 </div>
+                 <div class="radio">
+                   <label>
+                     <input type="radio" name="travs" value="27.95">
+                     50 Peice
+                   </label>
+                 </div>
+                 <div class="radio">
+                   <label>
+                     <input type="radio" name="travs" value="0">
+                     No thanks
+                   </label>
+                 </div>
+               </div>
+            <button type="submit" class="btn">Update Order</button>
+          </form>
+        </div>
+
+
+        <div class="col-md-4">
           <div id="show-pizza">
             <h2>Your Order:</h2>
             <p>Price: <span id="pizza-price"></span></p>
@@ -82,6 +116,7 @@
             </ul></p>
             <p>Special Instructions:<ul id="pizza-specials">
             </ul></p>
+            <p>Extras: <span id="pizza-extras"></span></p>
           </div>
         </div>
 

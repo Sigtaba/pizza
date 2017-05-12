@@ -1,15 +1,10 @@
 // business logic
-// function Order(pizza, price) {
-//   this.pizza = pizza;
-//   this.price = price;
-// }
 
 function Pizza(size, toppings, special) {
   this.size = size;
   this.toppings = toppings;
   this.special = special;
 }
-
 
 Pizza.prototype.getPrice = function() {
   var newPrice = parseFloat(this.size);
@@ -19,13 +14,15 @@ Pizza.prototype.getPrice = function() {
   return newPrice;
 }
 
+
+
 // function resetFields() {
-//     $("input#new-first-name").val("");
-//     $("input#new-last-name").val("");
-//     $("input.new-type").val("");
-//     $("input.new-street").val("");
-//     $("input.new-city").val("");
-//     $("input.new-state").val("");
+//     $("input#size").val("");
+//     $("input:checkbox[name=toppings]").val("");
+//     // $("input.new-type").val("");
+//     // $("input.new-street").val("");
+//     // $("input.new-city").val("");
+//     // $("input.new-state").val("");
 // }
 
 // user interface logic
@@ -75,9 +72,33 @@ $(document).ready(function() {
     }
 
     $("#pizza-price").text("$" + pizzaPrice);
+  //
+  //
+  //   // resetFields();
 
+    $("form#extras").submit(function(event) {
+      event.preventDefault();
 
-    // resetFields();
+      var checkedRavs = $('input[name="travs"]:checked').val();
 
+      var newPizzaPrice = pizzaPrice + parseInt(checkedRavs);
+
+      $("#pizza-price").text("$" + newPizzaPrice);
+
+      if (checkedRavs === "6.79") {
+        $("#pizza-extras").text("8 Peice Toasted Ravioli");
+      }
+      else if (checkedRavs === "17.50") {
+        $("#pizza-extras").text("24 Peice Toasted Ravioli");
+      }
+      else if (checkedRavs === "27.95") {
+        $("#pizza-extras").text("50 Peice Toasted Ravioli");
+      }
+      else {
+        $("#pizza-extras").text("N/A");
+      }
+
+    });
   });
+
 });
